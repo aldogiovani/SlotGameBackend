@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace SlotSimulator
 {
-    public class BookOfTreasures
+    public class SampleGame
     {
         private const int Card_End_1 = 25;
         private const int Card_End_2 = 65;
