@@ -93,57 +93,59 @@ namespace SlotSimulator
             Reels[2, 4] = CheckNumberDrawn(rng.Next(1, Card_End_13));
 
             //Map the draws to game reels, just for output simplicity and readability
-            this.GameReels = new List<GameReel>();
-            this.GameReels.Add(new GameReel
+            this.GameReels = new List<GameReel>
             {
-                Id = 1,
-                Positions = new List<GameReelPosition>
+                new GameReel
+                {
+                    Id = 1,
+                    Positions = new List<GameReelPosition>
                 {
                     new GameReelPosition{ Id = 0, CardId = Reels[2,0] },
                     new GameReelPosition{ Id = 1, CardId = Reels[1,0] },
                     new GameReelPosition{ Id = 2, CardId = Reels[0,0] },
                 }
-            });
-            this.GameReels.Add(new GameReel
-            {
-                Id = 2,
-                Positions = new List<GameReelPosition>
+                },
+                new GameReel
+                {
+                    Id = 2,
+                    Positions = new List<GameReelPosition>
                 {
                     new GameReelPosition{ Id = 0, CardId = Reels[2,1] },
                     new GameReelPosition{ Id = 1, CardId = Reels[1,1] },
                     new GameReelPosition{ Id = 2, CardId = Reels[0,1] },
                 }
-            });
-            this.GameReels.Add(new GameReel
-            {
-                Id = 3,
-                Positions = new List<GameReelPosition>
+                },
+                new GameReel
+                {
+                    Id = 3,
+                    Positions = new List<GameReelPosition>
                 {
                     new GameReelPosition{ Id = 0, CardId = Reels[2,2] },
                     new GameReelPosition{ Id = 1, CardId = Reels[1,2] },
                     new GameReelPosition{ Id = 2, CardId = Reels[0,2] },
                 }
-            });
-            this.GameReels.Add(new GameReel
-            {
-                Id = 4,
-                Positions = new List<GameReelPosition>
+                },
+                new GameReel
+                {
+                    Id = 4,
+                    Positions = new List<GameReelPosition>
                 {
                     new GameReelPosition{ Id = 0, CardId = Reels[2,3] },
                     new GameReelPosition{ Id = 1, CardId = Reels[1,3] },
                     new GameReelPosition{ Id = 2, CardId = Reels[0,3] },
                 }
-            });
-            this.GameReels.Add(new GameReel
-            {
-                Id = 5,
-                Positions = new List<GameReelPosition>
+                },
+                new GameReel
+                {
+                    Id = 5,
+                    Positions = new List<GameReelPosition>
                 {
                     new GameReelPosition{ Id = 0, CardId = Reels[2,4] },
                     new GameReelPosition{ Id = 1, CardId = Reels[1,4] },
                     new GameReelPosition{ Id = 2, CardId = Reels[0,4] },
                 }
-            });
+                }
+            };
 
             //Form the lines
             int[] line1 = { Reels[1, 0], Reels[1, 1], Reels[1, 2], Reels[1, 3], Reels[1, 4] };
